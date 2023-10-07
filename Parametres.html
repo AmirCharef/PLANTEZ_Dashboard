@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/project.css">
+        
+        <title>Dash</title>
+         <!-- google fonts  -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+    <div class="page">
+
+        <!-- Sidebar  -->
+        <div class="sidebar" >
+            <h3 class="txt-c">PLANTEZ</h3>
+            
+            <ul>
+                <li>
+                    <a class="" href="index.html">
+                        <i class="fa-solid fa-chart-bar fa-fw "></i>
+                        <span>Tableau de board</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="Offres.html">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                        <span>Offres</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="Commandes.html">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>Commandes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class=" " href="Produits.html">
+                        <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+                        <span>Produits</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="Categories.html">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Catégories</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="Profil.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="active" href="Parametres.html">
+                        <i class="fa-solid fa-gear "></i>
+                        <span>Paramètres</span>
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+        <div class="content">
+            <!-- Start head  -->
+            <div class="head">
+                <h4>Bienvenu</h4>
+                <div class="search">
+                    <input type="search" placeholder="Recherche ici">
+                </div>
+                <div class="icons">
+                    <img src="image/avatar.png" alt="Photo de profil" id="photo-profil">
+                    <div class="second">
+                            <h4>Nom et prénom</h4>
+                            <p>Super Administrateur</p>
+                        </div>
+                                            
+                </div>
+            </div>
+            <!-- End head  -->
+            
+            <!-- Start settings  -->
+            <h1 class="p-relative">Paramètres</h1>
+
+            <div class="settings-page">
+                <!-- Start settings boxes  -->
+
+                
+                <!-- Start general infos  -->
+                <div class="box info">
+                    <h2 >Informations générales</h2>
+                    <p >informations générales sur votre compte</p>
+                    <form action="">
+
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label for="first">Nom</label>
+                        <input type="text" id="myForm" placeholder="Nom" required/>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="last">Prénom</label>
+                        <input type="text" id="myForm" placeholder="Prénom" required/>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="email">Email</label>
+                        <div class="plus">
+                            <input class="email" 
+                                type="email" 
+                                id="myInput" 
+                                placeholder="example@estin.dz" 
+                                disabled required />
+                            <a href="#" id="toggleLink" onclick="toggleDisabled()">Changer</a>
+                        </div>
+                    </div>
+                    <script>
+                        function toggleDisabled() {
+                            var input = document.getElementById("myInput");
+                            if (input.disabled) {
+                                input.disabled = false;
+                            } else {
+                                input.disabled = true;
+                            }
+                        }
+
+                        toggleLink.addEventListener("click", function() {
+                        input.disabled = !input.disabled;
+                        });
+
+                        
+                        
+                    </script>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="last">N° Téléphone : </label>
+                        <input type="number" id="myForm" placeholder="Téléphone" required/>
+                    </div>
+
+                    <div class="photo">
+                        <label for="last">Photo</label>
+                        <input type="file" accept="image/*, application/pdf" id="input-photo-profil" name="photo_profil" required>
+                    </div>
+
+                    <input type="submit" value="sauvegarder" id="">
+                    </form>
+                </div>
+                    
+                <!-- End general infos  -->
+
+
+                <!-- Start Security infos  -->
+                <div class="box">
+                    <h2>Informations de sécurité</h2>
+                    <p>Informations de sécurité sur votre compte</p>
+                    <h3>Changer votre mot de passe</h3>
+                    <form action="">
+                    <div style="margin-bottom: 15px;" class="container">
+                        <label for="last">Ancien mot de passe : </label>
+                        <input type="password" id="password-last" required>
+                        <span id="toggle-password" class="password-toggle-icon" onclick="togglePasswordVisibility()">
+                            <i class="fa fa-eye"></i>
+                        </span>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label for="password">Nouveau mot de passe : </label>
+                        <input type="password" id="password" placeholder="" required/>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="confirm-password">Confirmer votre nouveau mot de passe : </label>
+                        <input type="password" id="confirm-password" placeholder="" required/>
+                    </div>
+                    <input type="submit" value="Valider" onclick="validatePassword()">
+                    <!-- <button type="button" onclick="validatePassword()">Valider</button> -->
+                    <p id="error-message" style="color: red; display: none;">Les deux champs ne sont pas identiques</p>
+                    
+                    <script>
+                        function validatePassword() {
+                            var password = document.getElementById("password");
+                            var confirmPassword = document.getElementById("confirm-password");
+                            var errorMessage = document.getElementById("error-message");
+
+                            if (password.value != confirmPassword.value) {
+                                errorMessage.style.display = "block";
+                            } else {
+                                errorMessage.style.display = "none";
+                                // Ajouter ici le code pour sauvegarder les données
+                            }
+                        }
+                    </script>
+                    </form>
+                </div>
+                <script>
+                    function togglePasswordVisibility() {
+                    const passwordInput = document.getElementById("password-last");
+                    const togglePasswordIcon = document.getElementById("toggle-password");
+                    
+                    if (passwordInput.type === "password") {
+                        passwordInput.type = "text";
+                        togglePasswordIcon.innerHTML = '<i class="fa fa-eye-slash"></i>';
+                    } else {
+                        passwordInput.type = "password";
+                        togglePasswordIcon.innerHTML = '<i class="fa fa-eye"></i>';
+                    }
+                    }
+                </script>
+                <!-- End Security infos  -->
+
+
+                <!-- Start Social infos -->
+                <div class="box social-boxes">
+                    <h2 >Informations sociales</h2>
+                    <p>Informations sur les réseaux sociaux</p>
+
+                    <form action="">
+
+                    
+                    <div>
+                        <i class="fa-brands fa-facebook"></i>
+                        <input class="no-rad" id="myForm" type="text" placeholder="Facebook Username">
+                    </div>
+
+                    <div>
+                        <i class="fa-brands fa-youtube"></i>
+                        <input class="no-rad" id="myForm" type="text" placeholder="Youtube Username">
+                    </div>
+
+                    <div>
+                        <i class="fa-brands fa-twitter"></i>
+                        <input class="no-rad" id="myForm" type="text" placeholder="Twitter Username">
+                    </div>
+
+                    <div>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <input class="no-rad" id="myForm" type="text" placeholder="Linkedin Username">
+                    </div>
+
+                    <input type="submit" value="Sauvegarder">
+                    </form>
+                </div>
+                <!-- End Social infos -->
+
+                
+              
+
+                <!-- End settings boxes  -->
+            </div>
+            
+
+            <!-- End settings  -->
+
+            
+            
+    </div>
+</body>
+</html>

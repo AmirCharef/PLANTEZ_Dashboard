@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/project.css">
+        
+        <title>Dash</title>
+         <!-- google fonts  -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+    <div class="page">
+
+        <!-- Sidebar  -->
+        <div class="sidebar" >
+            <h3 class="txt-c">PLANTEZ</h3>
+            
+            <ul>
+                <li>
+                    <a class="" href="index.html">
+                        <i class="fa-solid fa-chart-bar fa-fw "></i>
+                        <span>Tableau de board</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="Offres.html">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                        <span>Offres</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="Commandes.html">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span>Commandes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="active" href="Produits.html">
+                        <i class="fa-sharp fa-solid fa-bag-shopping"></i>
+                        <span>Produits</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="Categories.html">
+                        <i class="fa-solid fa-list-check"></i>
+                        <span>Catégories</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="" href="Profil.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profil</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a  href="Parametres.html">
+                        <i class="fa-solid fa-gear "></i>
+                        <span>Paramètres</span>
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+        <div class="content">
+            <!-- Start head  -->
+            <div class="head">
+                <h4>Bienvenu</h4>
+                <div class="search">
+                    <input type="search" placeholder="Recherche ici">
+                </div>
+                <div class="icons">
+                    <img src="image/avatar.png" alt="Photo de profil" id="photo-profil">
+                    <div class="second">
+                            <h4>Nom et prénom</h4>
+                            <p>Super Administrateur</p>
+                        </div>
+                                            
+                </div>
+            </div>
+            <!-- End head  -->
+            <h1 class="p-relative">Produits</h1>
+
+           
+
+            <div class="head-of-list">
+                <h4>Ajouter un produit</h4>
+            </div>
+
+            <div class="AjouterUnOffre">
+
+                <h3><span>*</span>Tous les Champs sont obligatoires</h3>
+
+                <form id="myForm" class="myForm">
+                    <table>
+                        <tr>
+                            <td>Nom du produit :</td><td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Catégorie :</label></td>
+                            <td>
+                              <select id="" name="">
+                                <option value="Plantes de Maison">Plantes de Maison</option>
+                                <option value="Plantes de décoration">Plantes de décoration</option>
+                              </select>
+                            </td>
+                          </tr>
+                        <tr>
+                            <td>Identifiant :</td><td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Prix (DA) :</td><td><input type="number" step="0.01" min="0" onblur="setDefaultDecimal(this)"></td>
+                        </tr>
+                        <script>
+                            function setDefaultDecimal(input) {
+                                if (input.value !== "") {
+                                    input.value = parseFloat(input.value).toFixed(2);
+                                }
+                            }
+                        </script>
+                        <tr>
+                            <td>Date et heure :</td><td><input type="date" required></td>
+                        </tr>
+                        <tr>
+                            <td>Statut :</td><td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>Photo :</td><td><input type="file" accept="image/*, application/pdf" required></td>
+                        </tr>
+                        
+                    </table>
+                    <div>
+                        <button type="button" onclick="clearForm()">Réinitialiser</button>
+                        <button type="submit">Ajouter</button>
+                    </div>
+                  </form>
+                  
+                  <script>
+                  function clearForm() {
+                    document.getElementById("myForm").reset(); // Efface les champs du formulaire
+                  }
+                  
+                  </script>
+            </div>
+                
+
+
+
+        </div>
+    </div>
+</body>
+</html>
